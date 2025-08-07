@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import  { useState, useRef, useEffect } from "react";
 import { FaTimes, FaComment } from "react-icons/fa";
 
 function ChatBot() {

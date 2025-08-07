@@ -1,4 +1,4 @@
-import React from "react";
+
 import { motion } from "framer-motion";
 import { BackgroundBeams } from "../ui/Background-beams";
 import Orb from "../ui/orb";
@@ -97,7 +97,7 @@ const Hero1 = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          Hi, I'm <span className="text-blue-500">Ajin</span>
+          Hi, I&apos;m <span className="text-blue-500">Ajin</span>
         </motion.h1>
 
         <motion.h2

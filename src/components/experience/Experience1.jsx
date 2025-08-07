@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 
 const Experience1 = () => {
   const [show, setShow] = useState(false);

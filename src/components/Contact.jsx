@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { FaEnvelope, FaRocket } from 'react-icons/fa';
 import emailjs from 'emailjs-com';  // Import EmailJS
 import './contactMe.css'; // Import custom CSS for animations
@@ -50,9 +50,9 @@ function ContactMe() {
   return (
     <section className="container mx-auto py-12 flex flex-col items-center" id="contact">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold mb-4">Let's chat.</h2>
+        <h2 className="text-3xl font-bold mb-4">Let&apos;s chat.</h2>
         <p className="text-lg mb-4">Tell me about your project.</p>
-        <p className="text-sm">Let's create something together. 🚀</p>
+        <p className="text-sm">Let&apos;s create something together. 🚀</p>
       </div>
 
       <div className="bg-gray-100 rounded-lg shadow-md p-8 w-full max-w-md">
