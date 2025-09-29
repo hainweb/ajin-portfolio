@@ -20,7 +20,7 @@ function App() {
       fetch('https://hain-analytics-backend.onrender.com/api/analytics/log', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ platform: 'ajin portfolio' }),
+    body: JSON.stringify({ platform: 'portfolio' }),
   }).catch(err => console.error('Logging API error:', err));
 
     return () => clearTimeout(timer); // Cleanup function
