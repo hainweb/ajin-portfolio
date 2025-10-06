@@ -32,7 +32,7 @@ function ContactMe1() {
     try {
       
 
-      // 2️⃣ Send the same data to Google Sheet
+      
       const formToSend = new FormData();
       formToSend.append("name", formData.fullName);
       formToSend.append("email", formData.email);
@@ -44,7 +44,7 @@ function ContactMe1() {
         body: formToSend,
       });
 
-      // ✅ Success
+     
       setSubmitted(true);
       setFormData({ fullName: "", email: "", subject: "", message: "" });
       setTimeout(() => setSubmitted(false), 3000);
@@ -63,14 +63,14 @@ function ContactMe1() {
     >
       <div className="text-center mb-10">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3">
-          Let&apos;s Connect 🤝
+          Let&apos;s Connect
         </h2>
         <p className="text-lg sm:text-xl text-gray-300">
-          Whether you&apos;re an HR, recruiter, or collaborator — feel free to
+          Whether you&apos;re an HR, recruiter, or collaborator feel free to
           reach out!
         </p>
         <p className="text-sm text-gray-400">
-          I&apos;d love to hear from you 🚀
+          I&apos;d love to hear from you 
         </p>
       </div>
 
@@ -104,7 +104,7 @@ function ContactMe1() {
               htmlFor="email"
               className="block text-sm font-medium text-gray-300"
             >
-              Email Address*
+              Email Address
             </label>
             <input
               type="email"
