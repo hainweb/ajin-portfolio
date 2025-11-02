@@ -38,14 +38,19 @@ const Header = ({ onScroll }) => {
       <div className="flex justify-between items-center py-3 px-6">
         {/* Logo */}
         <div>
-         {/*  <img
+          {/*  <img
             src="/logo/jtp-logo.png"
             alt="Logo"
             className="h-12 w-auto transition-transform duration-300 transform hover:scale-105"
           /> */}
-            <h1 className="text-2xl font-bold text-blue-600 hover:text-blue-800 transition duration-300 cursor-pointer">
-      Ajin
-    </h1>
+          <h1
+            className="text-2xl font-bold text-blue-600 hover:text-blue-800 transition duration-300 cursor-pointer"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Ajin
+          </h1>
         </div>
 
         {/* Desktop Navigation */}
@@ -53,9 +58,18 @@ const Header = ({ onScroll }) => {
           {["experience", "work", "about", "resume", "contact"].map((item) => (
             <button
               key={item}
-              onClick={() =>
-                item === "resume" ? navigate("/resume") : onScroll(item)
-              }
+              onClick={() => {
+                if (item === "resume") {
+                  navigate("/resume");
+                } else {
+                  if (window.location.pathname !== "/") {
+                    navigate("/");
+                    onScroll(item);
+                  } else {
+                    onScroll(item);
+                  }
+                }
+              }}
               className="relative text-white text-sm font-semibold uppercase transition-all duration-300 hover:text-blue-400"
             >
               {item.toUpperCase()}
@@ -89,29 +103,28 @@ const Header = ({ onScroll }) => {
           isMobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-       <div className="flex flex-col bg-opacity-50 backdrop-blur-lg p-6 rounded-b-2xl items-center">
-  {["experience", "work", "about", "resume", "contact"].map((item) => (
-    <button
-      key={item}
-      onClick={() => {
-        item === "resume" ? navigate("/resume") : onScroll(item);
-        toggleMobileMenu();
-      }}
-      className="block py-3 text-white text-lg font-semibold uppercase transition-all duration-300 hover:text-blue-400"
-    >
-      {item.toUpperCase()}
-    </button>
-  ))}
+        <div className="flex flex-col bg-opacity-50 backdrop-blur-lg p-6 rounded-b-2xl items-center">
+          {["experience", "work", "about", "resume", "contact"].map((item) => (
+            <button
+              key={item}
+              onClick={() => {
+                item === "resume" ? navigate("/resume") : onScroll(item);
+                toggleMobileMenu();
+              }}
+              className="block py-3 text-white text-lg font-semibold uppercase transition-all duration-300 hover:text-blue-400"
+            >
+              {item.toUpperCase()}
+            </button>
+          ))}
 
-  {/* Mobile Hire Me Button (Properly Centered) */}
-  <button
-    className="mt-4 px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full font-bold shadow-md hover:scale-105 transition-transform duration-300 text-base"
-    onClick={() => onScroll("contact")}
-  >
-    HIRE ME
-  </button>
-</div>
-
+          {/* Mobile Hire Me Button (Properly Centered) */}
+          <button
+            className="mt-4 px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full font-bold shadow-md hover:scale-105 transition-transform duration-300 text-base"
+            onClick={() => onScroll("contact")}
+          >
+            HIRE ME
+          </button>
+        </div>
       </div>
     </header>
   );
