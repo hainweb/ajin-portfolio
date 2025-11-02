@@ -1,14 +1,20 @@
-
 import { motion } from "framer-motion";
 import { BackgroundBeams } from "../ui/Background-beams";
 import Orb from "../ui/orb";
 
 // Import Lucide icons
 import { Phone, Mail, Linkedin } from "lucide-react";
+import { MdArrowDownward } from "react-icons/md";
 
 const Hero1 = () => {
-  const text = "Passionate about crafting scalable and high-performance web applications using modern technologies, with a strong focus on solving real-world challenges through clean architecture and intuitive design.".split(" ");
-  const text2 = "Committed to continuous learning and staying ahead with the latest in web development trends and best practices.".split(" ");
+  const text =
+    "Passionate about crafting scalable and high-performance web applications using modern technologies, with a strong focus on solving real-world challenges through clean architecture and intuitive design.".split(
+      " "
+    );
+  const text2 =
+    "Committed to continuous learning and staying ahead with the latest in web development trends and best practices.".split(
+      " "
+    );
 
   const handleDownload = () => {
     const resumeUrl = "/AJIN_R.pdf";
@@ -21,9 +27,12 @@ const Hero1 = () => {
   };
 
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between px-8 lg:px-40 py-20 min-h-fit bg-gray-900 text-white" id="about">
+    <section
+      className="relative flex flex-col md:flex-row items-center justify-between px-8 lg:px-40 py-20 min-h-fit bg-gray-900 text-white"
+      id="about"
+    >
       <BackgroundBeams className="absolute inset-0 opacity-60 z-0" />
-      
+
       {/* Left Section */}
       <div className="relative flex flex-col items-center md:items-start text-center md:text-left space-y-6 md:w-1/2">
         {/* Orb Container with Image Inside */}
@@ -82,10 +91,10 @@ const Hero1 = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="mt-4 lg:ml-8 px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-full shadow-md hover:scale-105 transition-transform duration-300 text-sm md:text-base"
+          className="mt-4 lg:ml-8 px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-full shadow-md hover:scale-105 transition-transform duration-300 text-sm md:text-base flex items-center gap-2 justify-center"
           onClick={handleDownload}
         >
-          DOWNLOAD RESUME ⬇
+          DOWNLOAD RESUME <MdArrowDownward size={18} />
         </motion.button>
       </div>
 
@@ -118,7 +127,7 @@ const Hero1 = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3, delay: i * 0.05 }}
             >
-              {word} {" "}
+              {word}{" "}
             </motion.span>
           ))}
         </motion.p>
@@ -131,7 +140,7 @@ const Hero1 = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3, delay: i * 0.05 }}
             >
-              {word} {" "}
+              {word}{" "}
             </motion.span>
           ))}
         </motion.div>
