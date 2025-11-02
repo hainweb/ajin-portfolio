@@ -18,11 +18,11 @@ function App() {
       setLoading(false);
     }, 8000);
 
-     /*  fetch('https://hain-analytics-backend.onrender.com/api/analytics/log', {
+      fetch('https://hain-analytics-backend.onrender.com/api/analytics/log', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ platform: 'portfolio' }),
-  }).catch(err => console.error('Logging API error:', err)); */
+  }).catch(err => console.error('Logging API error:', err));
 
     return () => clearTimeout(timer); // Cleanup function
   }, []);
